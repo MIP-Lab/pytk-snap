@@ -1,3 +1,7 @@
+This tool is used to build interactive medical image applications easily and rapidly. 
+
+More information about how to install and use this tool will be provided soon..
+
 Example applications are provided here,
 
 https://drive.google.com/drive/folders/1DFzNCVDU2gZVEgdHcfF1h-sHBEKtHPI0?usp=drive_link
