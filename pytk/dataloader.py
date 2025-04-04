@@ -23,16 +23,16 @@ class CaseLoader:
         button2.clicked.connect(partial(self._load_next, dataloader=self))
         
         text_box1 = Qt.QLineEdit()
-        text_box1.setFont(QFont('Times', 16))
+        text_box1.setFont(QFont('Times', 12))
         text_box1.setFixedWidth(60)
         text_box1.setText('0')
         
         label1 = Qt.QLabel()
-        label1.setFont(QFont('Times', 16))
+        label1.setFont(QFont('Times', 12))
         label1.setText('')
         
         text_box2 = Qt.QLineEdit()
-        text_box2.setFont(QFont('Times', 16))
+        text_box2.setFont(QFont('Times', 12))
         text_box2.setFixedWidth(200)
         
         button3 = Qt.QPushButton('Go')

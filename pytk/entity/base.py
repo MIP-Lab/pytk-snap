@@ -32,8 +32,8 @@ class Entity:
         self.opacity = opacity
         self.layer=layer
         self.icon = True
-        box = vedo.Box(length=0.4, width=0.1, height=0.1, c='#41ab5d')  
-        text = Text3D(self.name, s=0.055, c='white', justify='center', font='Ubuntu')
+        box = vedo.Box(length=0.3, width=0.05, height=0.1, c='#41ab5d')  
+        text = Text3D(self.name, s=0.025, c='white', justify='center', font='Ubuntu')
         box.view_name = f'{self.name}_icon'
         text.view_name = f'{self.name}_icon_text'
         self.icon_box = box

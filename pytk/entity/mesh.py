@@ -7,7 +7,7 @@ from ..view import View2D, View3D
 class Mesh3D(Entity):
 
     
-    def __init__(self, name, vertices, triangles, shape=None, affine=None, color='red', layer=3, opacity=1) -> None:
+    def __init__(self, name, vertices, triangles, shape=None, affine=None, color='red', layer=3, opacity=1, contour_eidth=3) -> None:
         super().__init__(name, layer, opacity)
 
         if affine is not None:
@@ -17,14 +17,16 @@ class Mesh3D(Entity):
         self.affine_std = affine
         mesh = vedo.Mesh([vertices, triangles], c=self.color, alpha=self.opacity).smooth()
         mesh.name = f'{name}_mesh'
-        self.mesh = mesh    
+        self.mesh = mesh
+        self.contour_eidth = contour_eidth    
 
     def create_renderables(self, view):
         
         if isinstance(view, View3D):
             return [self.mesh]
         elif isinstance(view, View2D):
-            contour = self.mesh.intersect_with_plane(view.coordsys.world_center, view.camera_focal_axis).linewidth(3).c(self.color)
+            contour = self.mesh.intersect_with_plane(view.coordsys.world_center, view.camera_focal_axis)\
+                .linewidth(self.contour_eidth).c(self.color)
             contour.opacity(self.opacity)
             shift = view.coordsys.default_world_center - view.coordsys.world_center
             shift[view.xyz[0]] = 0

@@ -52,6 +52,6 @@ class ControlPanel(View):
             box.view = self
             text.view = self
             text.pos(cur_x, cur_y, z + 0.1)
-            cur_y -= 0.15
+            cur_y -= 0.07
             icon_renderables += [box, text]
         return icon_renderables

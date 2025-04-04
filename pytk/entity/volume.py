@@ -264,6 +264,12 @@ class RGBImage3D(Entity):
         image.maxv = image.data.max()
         
         return image
+    
+    def set_min_max(self, minv=None, maxv=None):
+        if minv is not None:
+            self.minv = minv
+        if maxv is not None:
+            self.maxv = maxv
 
     def get_coordsys(self):
         shape_std, spacing_std = to_std_shape_spacing(self.ori_shape, self.ori_affine)

@@ -52,3 +52,4 @@ class CrossHair(Entity):
         crosshair3.obj_name = f'crosshair3'
         
         return [crosshair1, crosshair2, crosshair3]
+    

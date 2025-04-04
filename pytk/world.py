@@ -163,6 +163,9 @@ class World(Qt.QMainWindow):
     def add_transient(self, ren_id, obj):
         self.transient_renderables[ren_id] = obj
     
+    def clear_transient(self):
+        self.transient_renderables = {}
+    
     def get_view_by_type(self, view_type):
         views = [view for view in self.views.values() if isinstance(view, view_type)]
         return views
@@ -324,7 +327,10 @@ class World(Qt.QMainWindow):
         self.plotter.render()
         for k, v in self.transient_renderables.items():
             self.plotter.remove(v, at=k)
-        self.transient_renderables = {}
+        # self.transient_renderables = {}
+    
+    def screenshot(self, save_path):
+        self.plotter.screenshot(save_path)
             
     #################################################### Interaction ######################################################################
     

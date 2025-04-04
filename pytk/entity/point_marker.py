@@ -5,7 +5,7 @@ import vedo.vtkclasses as vtki
 import vtk
 from skimage.measure import marching_cubes
 from .base import Entity
-from ..view import View2D, View3D
+from ..view import View2D, View3D, AxialView
 from ..colors import colors_hex
 
 class PointMarkerGroup(Entity):
@@ -38,7 +38,7 @@ class PointMarkerGroup(Entity):
         if isinstance(view, View3D):
             return self.mesh3d
         
-        elif isinstance(view, View2D):
+        elif isinstance(view, AxialView):
             slice_data = np.zeros(view.grid_size_xy)
             for p in self.voxel_coords:
                 x, y, z = p[view.xyz[0]], p[view.xyz[1]], p[view.xyz[2]]

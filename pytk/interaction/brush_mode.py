@@ -55,7 +55,7 @@ def edit_mask(world, event, v):
     order.remove(view.xyz[2])
     order.insert(0, view.xyz[2])
     data = mask.transpose(order)[index]
-    view.hot_painting(data)
+    view.hot_painting(data, opacity=0.5)
 
     # world.update_renderables(world.get_view_by_type(View2D), list(world.interaction.brush_data.values()))
     world.render()

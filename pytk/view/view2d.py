@@ -60,11 +60,13 @@ class View2D(View):
         
         self.painting_data[:, :, layer] = data + ((data != 0) * layer * 100)
     
-    def hot_painting(self, data):
+    def hot_painting(self, data, opacity=1):
         data = data[: -1, : -1].T.flatten()
         colors = self.colormap[data]
         update_index = data != 0
-        self.painting_slice.cellcolors[update_index] = colors[update_index]
+        colors = colors[update_index]
+        colors[:, -1] = (colors[:, -1] != 0) * opacity * 255
+        self.painting_slice.cellcolors[update_index] = colors
 
     def clear_paiting_data(self, layer):
         self.layer_entity_map.pop(layer)

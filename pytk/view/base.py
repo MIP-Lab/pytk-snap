@@ -46,7 +46,7 @@ class View:
             world_dist = max(self.coordsys.world_size) + 5
             angle = 2 * np.arctan(world_dist / 2 / camera_dist) * 180 / np.pi
             camera.SetViewAngle(angle)
-            # camera.SetClippingRange(camera_dist - world_dist, camera_dist + world_dist)
+            camera.SetClippingRange(camera_dist - world_dist, camera_dist + world_dist)
         
         self.camera = camera
     
