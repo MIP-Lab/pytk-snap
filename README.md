@@ -6,7 +6,9 @@ Example applications are provided here,
 
 https://drive.google.com/drive/folders/1DFzNCVDU2gZVEgdHcfF1h-sHBEKtHPI0?usp=drive_link
 
-Demonstrations of the examples are provided below,
+Note: For demo_registration and demo_headsame, the provided code examples do not include image data due to data-sharing restrictions. Users need to use their own image data to run these two applications. All other applications use public data, which are included at the link above.
+
+Video demonstrations of the examples are provided below,
 
 https://github.com/user-attachments/assets/386b9557-474a-48d3-b850-51bbf3e12aff
 
