@@ -1,12 +1,27 @@
 This tool is used to build interactive medical image applications easily and rapidly. 
 
-More information about how to install and use this tool will be provided soon..
+## Installation
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+---
 
 Example applications are provided here,
 
 https://drive.google.com/drive/folders/1DFzNCVDU2gZVEgdHcfF1h-sHBEKtHPI0?usp=drive_link
 
+To run these appliactions, download them (install pytorch if needed), and run the following inside the appliaction folder:
+
+```bash
+python interactive.py
+```
+
 Note: For demo_registration and demo_headsame, the provided code examples do not include image data due to data-sharing restrictions. Users need to use their own image data to run these two applications. All other applications use public data, which are included at the link above.
+
+For any questions, please contact dingjie.su@vanderbilt.edu
 
 Video demonstrations of the examples are provided below,
 
